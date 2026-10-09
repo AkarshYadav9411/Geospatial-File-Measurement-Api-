@@ -237,11 +237,7 @@ Geospatial File Measurement API/
 ├── sample_data/
 │   ├── create_sample_files.py       # Synthetic sample dataset generator
 │   ├── sample_parcels.zip           # Sample Shapefile: NYC parcels (Polygon, EPSG:4326)
-│   ├── sample_trails.zip            # Sample Shapefile: Walking trails (LineString, EPSG:4326)
-│   ├── sample_landmarks.kml         # Sample KML: Mixed Polygons, Lines, Points
-│   ├── sample_continental.zip       # Sample Shapefile: Large extent (>6 deg lon)
-│   ├── sample_no_crs.zip            # Sample Shapefile: Missing .prj file
-│   └── README.md                    # Sample data documentation & cURL examples
+│   └── sample_landmarks.kml         # Sample KML: Mixed Polygons, Lines, Points
 ├── storage/
 │   ├── uploads/                     # Upload storage directory (.gitkeep)
 │   └── .gitkeep
