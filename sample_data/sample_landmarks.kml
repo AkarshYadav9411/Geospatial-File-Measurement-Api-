@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>New York Highlights</name>
+    <description>Demonstration KML with polygons, lines, and points</description>
+    <Placemark>
+      <name>Bryant Park</name>
+      <description>Public park in Manhattan</description>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -73.9845,40.7535,0 -73.9825,40.7535,0 -73.9825,40.7548,0 -73.9845,40.7548,0 -73.9845,40.7535,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark>
+      <name>Broadway Segment</name>
+      <description>Historic boulevard route</description>
+      <LineString>
+        <coordinates>
+          -73.9875,40.7510,0 -73.9860,40.7550,0 -73.9840,40.7590,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Empire State Building</name>
+      <description>Iconic skyscraper observation point</description>
+      <Point>
+        <coordinates>-73.9857,40.7484,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

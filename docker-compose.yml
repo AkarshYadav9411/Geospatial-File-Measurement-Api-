@@ -1,0 +1,29 @@
+services:
+  geomeasure-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: geomeasure-api
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=GeoMeasure API
+      - APP_ENV=production
+      - LOG_LEVEL=INFO
+      - LOG_FORMAT=json
+      - DATABASE_URL=sqlite:////app/storage/database.db
+      - UPLOAD_DIR=/app/storage/uploads
+      - MAX_UPLOAD_SIZE_MB=50
+    volumes:
+      - geomeasure_storage:/app/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+
+volumes:
+  geomeasure_storage:
+    driver: local
